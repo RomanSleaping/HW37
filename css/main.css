@@ -667,7 +667,6 @@ header li a:hover {
 }
 
 .hero {
-  width: 100%;
   height: 400px;
   margin: 0 auto;
   margin-bottom: 60px;
@@ -677,30 +676,32 @@ header li a:hover {
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-}
-@media screen and (min-width: 480px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/img/mobile-image/hero_mobile.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/mobile-image/hero_mobile.jpg);
-  }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: url(/img/mobile-image/hero_mobile.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: url(/img/mobile-image/hero@2x_mobile.jpg), url(/img/tablet-image/hero@2x_tablet.jpg), url(/img/desktop-image/hero@2x.jpg);
   }
 }
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/img/tablet-image/hero_tablet.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/tablet-image/hero_tablet.jpg);
+    width: 768px;
+    background-image: url(/img/tablet-image/hero_tablet.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 600px;
+    width: 1200px;
+    height: 680px;
     margin-bottom: 94px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/img/desktop-image/hero.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/desktop-image/hero.jpg);
+    background-image: url(/img/desktop-image/hero.jpg);
   }
 }
 
